@@ -1,0 +1,32 @@
+# База данных PostgreSQL - НАСТРОИТЬ
+# Создайте базу данных otp_service перед запуском
+db.url=jdbc:postgresql://localhost:5432/otp_service
+db.username=your_db_username
+db.password=your_db_password
+db.pool.size=10
+
+# Настройки JWT - НАСТРОИТЬ
+# Замените на сложный секретный ключ не менее 256 бит
+jwt.secret=your_jwt_secret_key_with_at_least_256_bits
+jwt.expiration=86400000
+
+# Настройки по умолчанию для OTP
+otp.default.length=6
+otp.default.expiration=300000
+
+# Настройки для отправки Email
+mail.smtp.host=smtp.example.com
+mail.smtp.port=587
+mail.smtp.auth=true
+mail.smtp.starttls.enable=true
+mail.username=your_email@example.com
+mail.password=your_email_password
+
+# Настройки для Telegram - НАСТРОИТЬ
+# Получите у @BotFather в Telegram
+telegram.bot.username=your_bot_username
+telegram.bot.token=your_bot_token
+
+# Настройки HTTP сервера
+server.port=8080
+server.host=0.0.0.0 
